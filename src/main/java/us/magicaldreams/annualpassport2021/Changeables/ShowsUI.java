@@ -137,6 +137,11 @@ public class ShowsUI {
         GSGMeta.setDisplayName(" ");
         GSG.setItemMeta(GSGMeta);
 
+        ItemStack none = new ItemStack(Material.BARRIER);
+        ItemMeta noneMeta = none.getItemMeta();
+        noneMeta.setDisplayName(ChatColor.RED + "No Shows Currently");
+        none.setItemMeta(noneMeta);
+
         ShowTimesGUI.setItem(0, BSG);
         ShowTimesGUI.setItem(1, BSG);
         ShowTimesGUI.setItem(2, BSG);
@@ -147,13 +152,13 @@ public class ShowsUI {
         ShowTimesGUI.setItem(7, BSG);
         ShowTimesGUI.setItem(8, back);
         ShowTimesGUI.setItem(9, ShowsM);
-        ShowTimesGUI.setItem(10, ShowM1);
+        ShowTimesGUI.setItem(10, none);
         // ShowTimesGUI.setItem(11, );
-        ShowTimesGUI.setItem(12, ShowM2);
+        ShowTimesGUI.setItem(12, none);
         //  ShowTimesGUI.setItem(13, );
-        ShowTimesGUI.setItem(14, ShowM3);
+        ShowTimesGUI.setItem(14, none);
         //  ShowTimesGUI.setItem(15, );
-        ShowTimesGUI.setItem(16, ShowM4);
+        ShowTimesGUI.setItem(16, none);
         //  ShowTimesGUI.setItem(17, );
         ShowTimesGUI.setItem(18, GSG);
         ShowTimesGUI.setItem(19, GSG);
@@ -165,13 +170,13 @@ public class ShowsUI {
         ShowTimesGUI.setItem(25, GSG);
         ShowTimesGUI.setItem(26, GSG);
         ShowTimesGUI.setItem(27, ShowsA);
-        ShowTimesGUI.setItem(28, ShowA1);
+        ShowTimesGUI.setItem(28, none);
         //  ShowTimesGUI.setItem(29, );
-        ShowTimesGUI.setItem(30, ShowA2);
+        ShowTimesGUI.setItem(30, none);
         // ShowTimesGUI.setItem(31, );
-        ShowTimesGUI.setItem(32, ShowA3);
+        ShowTimesGUI.setItem(32, none);
         //   ShowTimesGUI.setItem(33, );
-        ShowTimesGUI.setItem(34, ShowA4);
+        ShowTimesGUI.setItem(34, none);
         //   ShowTimesGUI.setItem(35, );
         ShowTimesGUI.setItem(36, BSG);
         ShowTimesGUI.setItem(37, BSG);
@@ -183,13 +188,13 @@ public class ShowsUI {
         ShowTimesGUI.setItem(43, BSG);
         ShowTimesGUI.setItem(44, BSG);
         ShowTimesGUI.setItem(45, ShowsE);
-        ShowTimesGUI.setItem(46, ShowE1);
+        ShowTimesGUI.setItem(46, none);
         //   ShowTimesGUI.setItem(47, );
-        ShowTimesGUI.setItem(48, ShowE2);
+        ShowTimesGUI.setItem(48, none);
         //   ShowTimesGUI.setItem(49, );
-        ShowTimesGUI.setItem(50, ShowE3);
+        ShowTimesGUI.setItem(50, none);
         //  ShowTimesGUI.setItem(51, );
-        ShowTimesGUI.setItem(52, ShowE4);
+        ShowTimesGUI.setItem(52, none);
         //   ShowTimesGUI.setItem(53, );
 
 

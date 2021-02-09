@@ -30,6 +30,11 @@ public class DiningUI {
         BSGMeta.setDisplayName(" ");
         BSG.setItemMeta(BSGMeta);
 
+        ItemStack none = new ItemStack(Material.BARRIER);
+        ItemMeta noneMeta = none.getItemMeta();
+        noneMeta.setDisplayName(ChatColor.RED + "No Dining Currently");
+        none.setItemMeta(noneMeta);
+
         DiningGUI.setItem(0, BSG);
         DiningGUI.setItem(1, BSG);
         DiningGUI.setItem(2, BSG);
@@ -41,6 +46,9 @@ public class DiningUI {
         DiningGUI.setItem(8, back);
         DiningGUI.setItem(9, BSG);
         DiningGUI.setItem(18, BSG);
+
+        DiningGUI.setItem(22, none);
+
         DiningGUI.setItem(27, BSG);
         DiningGUI.setItem(36, BSG);
         DiningGUI.setItem(45, BSG);

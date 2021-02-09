@@ -37,6 +37,11 @@ public class AttractionsUI {
         backMeta.setDisplayName(ChatColor.GREEN + "<-- Back");
         back.setItemMeta(backMeta);
 
+        ItemStack none = new ItemStack(Material.BARRIER);
+        ItemMeta noneMeta = none.getItemMeta();
+        noneMeta.setDisplayName(ChatColor.RED + "No Attractions Currently");
+        none.setItemMeta(noneMeta);
+
 
         attractionsUI.setItem(0, BSG);
         attractionsUI.setItem(1, BSG);
@@ -49,6 +54,9 @@ public class AttractionsUI {
         attractionsUI.setItem(8, back);
         attractionsUI.setItem(9, BSG);
         attractionsUI.setItem(18, BSG);
+
+        attractionsUI.setItem(22, none);
+
         attractionsUI.setItem(27, BSG);
         attractionsUI.setItem(36, BSG);
         attractionsUI.setItem(45, BSG);

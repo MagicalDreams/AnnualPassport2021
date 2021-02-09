@@ -29,6 +29,11 @@ public class ShopsUI {
         BSGMeta.setDisplayName(" ");
         BSG.setItemMeta(BSGMeta);
 
+        ItemStack none = new ItemStack(Material.BARRIER);
+        ItemMeta noneMeta = none.getItemMeta();
+        noneMeta.setDisplayName(ChatColor.RED + "No Shops Currently");
+        none.setItemMeta(noneMeta);
+
         ShopsGUI.setItem(0, BSG);
         ShopsGUI.setItem(1, BSG);
         ShopsGUI.setItem(2, BSG);
@@ -40,6 +45,9 @@ public class ShopsUI {
         ShopsGUI.setItem(8, back);
         ShopsGUI.setItem(9, BSG);
         ShopsGUI.setItem(18, BSG);
+
+        ShopsGUI.setItem(22, none);
+
         ShopsGUI.setItem(27, BSG);
         ShopsGUI.setItem(36, BSG);
         ShopsGUI.setItem(45, BSG);

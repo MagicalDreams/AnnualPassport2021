@@ -1,0 +1,7 @@
+name: AnnualPassport-2021
+version: 0.0.1
+main: us.magicaldreams.annualpassport2021.Override.Main
+api-version: 1.16
+authors: [ Nolant108, Chums122 ]
+description: The 2021 Annual Passport
+website: https://magicaldreams.us

@@ -28,6 +28,31 @@ public class APMove implements Listener {
             event.setCancelled(true);
             p.sendMessage(ChatColor.RED + "You can't drop the item");
         }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.GRAY_STAINED_GLASS_PANE) {
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.CHEST){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.ENCHANTED_BOOK){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.WRITTEN_BOOK){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.BOOK){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
     }
 
     @EventHandler(priority = EventPriority.LOWEST)

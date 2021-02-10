@@ -19,7 +19,6 @@ public class APMove implements Listener {
         this.main = main;
     }
 
-
     @EventHandler
     public void onPlayerDropItem(PlayerDropItemEvent event) {
         Player p = event.getPlayer();
@@ -28,7 +27,33 @@ public class APMove implements Listener {
             event.setCancelled(true);
             p.sendMessage(ChatColor.RED + "You can't drop the item");
         }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.GRAY_STAINED_GLASS_PANE) {
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.CHEST){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.ENCHANTED_BOOK){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.WRITTEN_BOOK){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
+
+        if(event.getItemDrop().getItemStack().getType() == Material.BOOK){
+            event.setCancelled(true);
+            p.sendMessage(ChatColor.RED + "You can't drop the item");
+        }
     }
+
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void onMove8(InventoryClickEvent e){

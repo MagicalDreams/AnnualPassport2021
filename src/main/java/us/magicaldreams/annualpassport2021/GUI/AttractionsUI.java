@@ -15,6 +15,45 @@ public class AttractionsUI {
         Inventory attractionsUI = Bukkit.createInventory(null, 54, ChatColor.BLUE + "Attractions: Page 1");
 
 
+        ItemStack JTA = new ItemStack(Material.ZOMBIE_HORSE_SPAWN_EGG);
+        ItemMeta JTAMeta = JTA.getItemMeta();
+        JTAMeta.setDisplayName("Journey to Atlantis");
+        JTA.setItemMeta(JTAMeta);
+
+        ItemStack GW = new ItemStack(Material.PIG_SPAWN_EGG);
+        ItemMeta GWMeta = GW.getItemMeta();
+        GWMeta.setDisplayName("Great White");
+        GW.setItemMeta(GWMeta);
+
+        ItemStack SE = new ItemStack(Material.PARROT_SPAWN_EGG);
+        ItemMeta SEMeta = SE.getItemMeta();
+        SEMeta.setDisplayName("Steel Eel");
+        SE.setItemMeta(SEMeta);
+
+        ItemStack RL = new ItemStack(Material.OCELOT_SPAWN_EGG);
+        ItemMeta RLMeta = RL.getItemMeta();
+        RLMeta.setDisplayName("Rio Loco");
+        RL.setItemMeta(RLMeta);
+
+        ItemStack WB = new ItemStack(Material.MULE_SPAWN_EGG);
+        ItemMeta WBMeta = WB.getItemMeta();
+        WBMeta.setDisplayName("Wave Breaker");
+        WB.setItemMeta(WBMeta);
+
+        ItemStack SG = new ItemStack(Material.HORSE_SPAWN_EGG);
+        ItemMeta SGMeta = SG.getItemMeta();
+        SGMeta.setDisplayName("Super Groovers Box Car Derby");
+        SG.setItemMeta(SGMeta);
+
+        ///INPUTS///
+
+        attractionsUI.setItem(10, JTA);
+        attractionsUI.setItem(11, GW);
+        attractionsUI.setItem(12, SE);
+        attractionsUI.setItem(13, RL);
+        attractionsUI.setItem(14, WB);
+        attractionsUI.setItem(15, SG);
+
 
         //NONNNNNN NEEEDED STiFFFFFF
         ItemStack BSG = new ItemStack((Material.BLUE_STAINED_GLASS_PANE));

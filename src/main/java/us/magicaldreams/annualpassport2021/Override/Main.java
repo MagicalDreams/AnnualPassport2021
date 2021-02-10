@@ -12,6 +12,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new onLoad(this), this);
         Bukkit.getPluginManager().registerEvents(new OpenAP(this), this);
         Bukkit.getPluginManager().registerEvents(new APMove(this), this);
+        Bukkit.getPluginManager().registerEvents(new settings(this), this);
 
 
 

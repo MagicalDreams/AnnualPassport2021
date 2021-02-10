@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import us.magicaldreams.annualpassport2021.Changeables.ShowsUI;
 import us.magicaldreams.annualpassport2021.GUI.*;
 
@@ -249,7 +250,7 @@ public class OpenAP implements Listener {
     }
 
     @EventHandler
-    public void ShopsCLick(InventoryClickEvent e){
+    public void ShopsCLick(InventoryClickEvent e, PlayerInteractEvent p){
 
         Player player = (Player) e.getWhoClicked();
 

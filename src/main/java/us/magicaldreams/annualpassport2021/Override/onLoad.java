@@ -2,11 +2,8 @@ package us.magicaldreams.annualpassport2021.Override;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -15,15 +12,12 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import us.magicaldreams.annualpassport2021.GUI.AnnualPassportUI;
 
-import java.util.Objects;
 
 public class onLoad implements Listener {
 
     private static Main main;
 
-    public onLoad(Main main){
-        this.main = main;
-    }
+    public onLoad(Main main){ this.main = main; }
 
     ItemStack JoinMB;
     ItemMeta JoinMBMeta;
@@ -99,7 +93,7 @@ public class onLoad implements Listener {
 
             if(action.equals(Action.LEFT_CLICK_BLOCK)){
 
-                ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
+                settings.playSound((PlayerInteractEvent) p);
 
                 AnnualPassportUI.applyAnnualPassportUI((Player) player);
 
@@ -107,13 +101,13 @@ public class onLoad implements Listener {
 
             if(action.equals(Action.LEFT_CLICK_AIR)){
 
-                ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
+                settings.playSound((PlayerInteractEvent) p);
 
                 AnnualPassportUI.applyAnnualPassportUI((Player) player);
 
             }
 
-            ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
+            settings.playSound((PlayerInteractEvent) p);
 
             AnnualPassportUI.applyAnnualPassportUI((Player) player);
 
@@ -121,5 +115,6 @@ public class onLoad implements Listener {
 
 
     }
+
 
 }

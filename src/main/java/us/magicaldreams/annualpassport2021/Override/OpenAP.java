@@ -250,7 +250,7 @@ public class OpenAP implements Listener {
     }
 
     @EventHandler
-    public void ShopsCLick(InventoryClickEvent e, PlayerInteractEvent p){
+    public void ShopsCLick(InventoryClickEvent e){
 
         Player player = (Player) e.getWhoClicked();
 

@@ -3,7 +3,6 @@ package us.magicaldreams.annualpassport2021.Override;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -56,11 +55,43 @@ public class APMove implements Listener {
         }
     }
 
+    @EventHandler(priority = EventPriority.LOW)
+    public void onChestMove(InventoryClickEvent e){
+        ItemStack i = e.getWhoClicked().getInventory().getItem(6);
+        if(i !=null){
+            if(e.getSlot() == 6 && i.getType() == Material.CHEST){
+                e.setCancelled(true);
+            }
+        }
+    }
 
-    @EventHandler
-    public void onClickInventory(InventoryClickEvent event){
-        event.getClick();
-        event.setResult(Event.Result.DENY);
+    @EventHandler(priority = EventPriority.LOW)
+    public void onGlassMove(InventoryClickEvent e){
+
+        ItemStack i = e.getWhoClicked().getInventory().getItem(4);
+        if(i != null){
+            if(e.getSlot() == 4 && i.getType() == Material.GRAY_STAINED_GLASS_PANE){
+                e.setCancelled(true);
+            }
+        }
+
+        ItemStack i5 = e.getWhoClicked().getInventory().getItem(5);
+        if(i5 != null){
+            if(e.getSlot() == 5 && i5.getType() == Material.GRAY_STAINED_GLASS_PANE){
+                e.setCancelled(true);
+            }
+        }
+
+    }
+
+    @EventHandler(priority = EventPriority.LOW)
+    public static void onBookMove(InventoryClickEvent e){
+        ItemStack i = e.getWhoClicked().getInventory().getItem(7);
+        if(i !=null){
+            if(e.getSlot() == 7 && i.getType() == Material.WRITTEN_BOOK){
+                e.setCancelled(true);
+            }
+        }
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
@@ -73,6 +104,7 @@ public class APMove implements Listener {
                 e.setCancelled(true);
             }
         }
+
     }
 
     @EventHandler(priority = EventPriority.LOWEST)

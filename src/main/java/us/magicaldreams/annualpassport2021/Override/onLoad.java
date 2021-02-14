@@ -97,21 +97,6 @@ public class onLoad implements Listener {
                 return;
             }
 
-            if(action.equals(Action.LEFT_CLICK_BLOCK)){
-
-                ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
-
-                AnnualPassportUI.applyAnnualPassportUI((Player) player);
-
-            }
-
-            if(action.equals(Action.LEFT_CLICK_AIR)){
-
-                ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
-
-                AnnualPassportUI.applyAnnualPassportUI((Player) player);
-
-            }
 
             ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
 

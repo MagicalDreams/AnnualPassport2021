@@ -17,12 +17,4 @@ public class settings implements Listener {
         this.main = main;
     }
 
-    @EventHandler
-    public static void playSound(PlayerInteractEvent e){
-        Player p = e.getPlayer();
-
-        ((Player) p).playSound(Objects.requireNonNull(((OfflinePlayer) p).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
-
-    }
-
 }

@@ -6,29 +6,27 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import us.magicaldreams.annualpassport2021.GUI.AnnualPassportUI;
 
+import java.util.ArrayList;
 import java.util.Objects;
+
 
 public class onLoad implements Listener {
 
     private static Main main;
 
-    public onLoad(Main main){
-        this.main = main;
-    }
+    public onLoad(Main main){ this.main = main; }
 
     ItemStack JoinMB;
     ItemMeta JoinMBMeta;
-    ItemStack JoinAuto;
-    ItemMeta JoinAutoMeta;
     ItemStack JoinBackpack;
     ItemMeta JoinBackpackMeta;
     ItemStack JoinGlassPane;
@@ -50,11 +48,16 @@ public class onLoad implements Listener {
 
         //AutoGraph
 
-        JoinAuto = new ItemStack(Material.WRITTEN_BOOK);
-        JoinAutoMeta = JoinAuto.getItemMeta();
+        ItemStack JoinAuto = new ItemStack(Material.WRITTEN_BOOK);
+        BookMeta JoinAutoMeta = (BookMeta) JoinAuto.getItemMeta();
         JoinAutoMeta.setDisplayName(ChatColor.GREEN + player.getName() + "'s" + ChatColor.AQUA + " Autograph Book");
         JoinAuto.setItemMeta(JoinAutoMeta);
         player.getInventory().setItem(7, JoinAuto);
+        //----------BOOK INIT META STUFF------------
+        JoinAutoMeta.setAuthor("MagicalDreams");
+        JoinAutoMeta.setTitle("Autograph Book");
+        ArrayList<String> pages = new ArrayList<String>();
+
 
         //Backpack
 
@@ -96,24 +99,7 @@ public class onLoad implements Listener {
             if (action.equals(Action.PHYSICAL)) {
                 return;
             }
-
-            if(action.equals(Action.LEFT_CLICK_BLOCK)){
-
-                ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
-
-                AnnualPassportUI.applyAnnualPassportUI((Player) player);
-
-            }
-
-            if(action.equals(Action.LEFT_CLICK_AIR)){
-
-                ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
-
-                AnnualPassportUI.applyAnnualPassportUI((Player) player);
-
-            }
-
-            ((Player) player).playSound(Objects.requireNonNull(((OfflinePlayer) player).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
+            ((Player) p).playSound(Objects.requireNonNull(((OfflinePlayer) p).getPlayer()).getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 2.0F, 1.0F);
 
             AnnualPassportUI.applyAnnualPassportUI((Player) player);
 
@@ -121,5 +107,6 @@ public class onLoad implements Listener {
 
 
     }
+
 
 }

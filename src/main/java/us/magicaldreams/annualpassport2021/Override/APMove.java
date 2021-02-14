@@ -19,6 +19,7 @@ public class APMove implements Listener {
         this.main = main;
     }
 
+
     @EventHandler
     public void onPlayerDropItem(PlayerDropItemEvent event) {
         Player p = event.getPlayer();
@@ -54,6 +55,44 @@ public class APMove implements Listener {
         }
     }
 
+    @EventHandler(priority = EventPriority.LOW)
+    public void onChestMove(InventoryClickEvent e){
+        ItemStack i = e.getWhoClicked().getInventory().getItem(6);
+        if(i !=null){
+            if(e.getSlot() == 6 && i.getType() == Material.CHEST){
+                e.setCancelled(true);
+            }
+        }
+    }
+
+    @EventHandler(priority = EventPriority.LOW)
+    public void onGlassMove(InventoryClickEvent e){
+
+        ItemStack i = e.getWhoClicked().getInventory().getItem(4);
+        if(i != null){
+            if(e.getSlot() == 4 && i.getType() == Material.GRAY_STAINED_GLASS_PANE){
+                e.setCancelled(true);
+            }
+        }
+
+        ItemStack i5 = e.getWhoClicked().getInventory().getItem(5);
+        if(i5 != null){
+            if(e.getSlot() == 5 && i5.getType() == Material.GRAY_STAINED_GLASS_PANE){
+                e.setCancelled(true);
+            }
+        }
+
+    }
+
+    @EventHandler(priority = EventPriority.LOW)
+    public static void onBookMove(InventoryClickEvent e){
+        ItemStack i = e.getWhoClicked().getInventory().getItem(7);
+        if(i !=null){
+            if(e.getSlot() == 7 && i.getType() == Material.WRITTEN_BOOK){
+                e.setCancelled(true);
+            }
+        }
+    }
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void onMove8(InventoryClickEvent e){
@@ -65,6 +104,7 @@ public class APMove implements Listener {
                 e.setCancelled(true);
             }
         }
+
     }
 
     @EventHandler(priority = EventPriority.LOWEST)

@@ -15,6 +15,33 @@ public class DiningUI {
     public static void applyDiningUI(Player player){
         Inventory DiningGUI = Bukkit.createInventory(null, 54, ChatColor.BLUE + "Dining");
 
+        ItemStack R = new ItemStack(Material.SALMON_SPAWN_EGG);
+        ItemMeta RMeta = R.getItemMeta();
+        RMeta.setDisplayName("Rositas Cafe");
+        R.setItemMeta(RMeta);
+
+        ItemStack SG = new ItemStack(Material.MAGMA_CUBE_SPAWN_EGG);
+        ItemMeta SGMeta = SG.getItemMeta();
+        SGMeta.setDisplayName("Smokehouse Grill");
+        SG.setItemMeta(SGMeta);
+
+        ItemStack P = new ItemStack(Material.MOOSHROOM_SPAWN_EGG);
+        ItemMeta PMeta = P.getItemMeta();
+        PMeta.setDisplayName("Pretzel Kitchen");
+        P.setItemMeta(PMeta);
+
+        ItemStack T = new ItemStack(Material.HORSE_SPAWN_EGG);
+        ItemMeta TMeta = T.getItemMeta();
+        TMeta.setDisplayName("Trimmings at Rio Grill");
+        T.setItemMeta(TMeta);
+
+
+        DiningGUI.setItem(10, R);
+        DiningGUI.setItem(11, SG);
+        DiningGUI.setItem(12, P);
+        DiningGUI.setItem(13, T);
+
+
         ItemStack back = new ItemStack(Material.PAPER);
         ItemMeta backMeta = back.getItemMeta();
         backMeta.setDisplayName(ChatColor.GREEN + "<-- Back");

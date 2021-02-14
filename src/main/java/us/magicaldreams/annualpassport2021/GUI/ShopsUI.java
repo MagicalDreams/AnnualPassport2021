@@ -14,6 +14,71 @@ public class ShopsUI {
     public static void applyShopsUI(Player player){
         Inventory ShopsGUI = Bukkit.createInventory(null, 54, ChatColor.BLUE + "Shops");
 
+        ItemStack SSM = new ItemStack(Material.ZOMBIE_HORSE_SPAWN_EGG);
+        ItemMeta SSMMeta = SSM.getItemMeta();
+        SSMMeta.setDisplayName("Sea Star Market");
+        SSM.setItemMeta(SSMMeta);
+
+        ItemStack HM = new ItemStack(Material.PIG_SPAWN_EGG);
+        ItemMeta HMMeta = HM.getItemMeta();
+        HMMeta.setDisplayName("Harbor Market");
+        HM.setItemMeta(HMMeta);
+
+        ItemStack C = new ItemStack(Material.PARROT_SPAWN_EGG);
+        ItemMeta CMeta = C.getItemMeta();
+        CMeta.setDisplayName("Currents");
+        C.setItemMeta(CMeta);
+
+        ItemStack SE = new ItemStack(Material.OCELOT_SPAWN_EGG);
+        ItemMeta SEMeta = SE.getItemMeta();
+        SEMeta.setDisplayName("Shamus Emporium");
+        SE.setItemMeta(SEMeta);
+
+        ItemStack US = new ItemStack(Material.MULE_SPAWN_EGG);
+        ItemMeta USMeta = US.getItemMeta();
+        USMeta.setDisplayName("Under the Sun");
+        US.setItemMeta(USMeta);
+
+
+        ShopsGUI.setItem(10, SSM);
+        ShopsGUI.setItem(11, HM);
+        ShopsGUI.setItem(12, C);
+        ShopsGUI.setItem(13, SE);
+        ShopsGUI.setItem(14, US);
+
+        // Secondary Stuff
+
+        ItemStack P = new ItemStack(Material.MOOSHROOM_SPAWN_EGG);
+        ItemMeta PMeta = P.getItemMeta();
+        PMeta.setDisplayName("Pretzel Kitchen");
+        P.setItemMeta(PMeta);
+
+        ItemStack S = new ItemStack(Material.SILVERFISH_SPAWN_EGG);
+        ItemMeta SMeta = C.getItemMeta();
+        SMeta.setDisplayName("Spankys");
+        S.setItemMeta(SMeta);
+
+        ItemStack SA = new ItemStack(Material.PILLAGER_SPAWN_EGG);
+        ItemMeta SAMeta = SA.getItemMeta();
+        SAMeta.setDisplayName("Sneak Attack");
+        SA.setItemMeta(SAMeta);
+
+        ItemStack PP = new ItemStack(Material.PIGLIN_BRUTE_SPAWN_EGG);
+        ItemMeta PPMeta = PP.getItemMeta();
+        PPMeta.setDisplayName("Polar Polar");
+        PP.setItemMeta(PPMeta);
+
+
+
+        ShopsGUI.setItem(15, S);
+        ShopsGUI.setItem(16, SA);
+        ShopsGUI.setItem(22, PP);
+
+
+        ///INPUTS///
+
+
+
         ItemStack back = new ItemStack(Material.PAPER);
         ItemMeta backMeta = back.getItemMeta();
         backMeta.setDisplayName(ChatColor.GREEN + "<-- Back");

@@ -59,7 +59,7 @@ public class ShowsUI {
 
         ItemStack ShowM1 = new ItemStack((Material.LIGHT_BLUE_DYE));
         ItemMeta ShowM1Meta = ShowM1.getItemMeta();
-        ShowM1Meta.setDisplayName(ChatColor.YELLOW + "Show M 1");
+        ShowM1Meta.setDisplayName(ChatColor.YELLOW + "Ocean Discovery");
         ShowM1.setItemMeta(ShowM1Meta);
 
         ItemStack ShowM2 = new ItemStack((Material.LIGHT_BLUE_DYE));
@@ -87,7 +87,7 @@ public class ShowsUI {
 
         ItemStack ShowA2 = new ItemStack((Material.MAGENTA_DYE));
         ItemMeta ShowA2Meta = ShowA2.getItemMeta();
-        ShowA2Meta.setDisplayName(ChatColor.YELLOW + "Show A 2");
+        ShowA2Meta.setDisplayName(ChatColor.YELLOW + "Ocean Discovery");
         ShowA2.setItemMeta(ShowA2Meta);
 
         ItemStack ShowA3 = new ItemStack((Material.MAGENTA_DYE));
@@ -116,7 +116,7 @@ public class ShowsUI {
 
         ItemStack ShowE3 = new ItemStack((Material.ORANGE_DYE));
         ItemMeta ShowE3Meta = ShowE3.getItemMeta();
-        ShowE3Meta.setDisplayName(ChatColor.YELLOW + "Show E 3");
+        ShowE3Meta.setDisplayName(ChatColor.YELLOW + "Ocean Discovery");
         ShowE3.setItemMeta(ShowE3Meta);
 
         ItemStack ShowE4 = new ItemStack((Material.ORANGE_DYE));

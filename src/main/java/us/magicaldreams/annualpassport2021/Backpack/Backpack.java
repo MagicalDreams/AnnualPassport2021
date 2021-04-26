@@ -3,6 +3,7 @@ package us.magicaldreams.annualpassport2021.Backpack;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -10,13 +11,22 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import us.magicaldreams.annualpassport2021.Config.FileManager;
+import us.magicaldreams.annualpassport2021.Override.Main;
 
 
-public class Backpack extends JavaPlugin implements Listener {
+public class Backpack implements CommandExecutor {
+
+    private Main main;
+
+    public Backpack(Main main) {
+
+        this.main = main;
+
+    }
 
     FileManager fm = FileManager.getInstance();
 
-    @Override
+
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 
         if(cmd.getName().equalsIgnoreCase("backpack")){

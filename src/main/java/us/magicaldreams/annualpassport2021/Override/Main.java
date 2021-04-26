@@ -2,6 +2,7 @@ package us.magicaldreams.annualpassport2021.Override;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import us.magicaldreams.annualpassport2021.Backpack.Backpack;
 
 public final class Main extends JavaPlugin {
 
@@ -12,7 +13,9 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new onLoad(this), this);
         Bukkit.getPluginManager().registerEvents(new OpenAP(this), this);
         Bukkit.getPluginManager().registerEvents(new APMove(this), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerCloseInv(), this);
 
+        getCommand("backpack").setExecutor(new Backpack(this));
     }
 
 

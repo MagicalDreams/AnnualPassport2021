@@ -1,7 +1,11 @@
 name: AnnualPassport-2021
-version: 2021.0.60.21
+version: 2021.0.90.35
 main: us.magicaldreams.annualpassport2021.Override.Main
 api-version: 1.16
 authors: [ Nolant108, Chums122 ]
 description: The 2021 Annual Passport for SWMC-SWSA
 website: https://magicaldreams.us
+commands:
+  backpack:
+    description: Open Your Backpack!
+    aliases: [bp, back]

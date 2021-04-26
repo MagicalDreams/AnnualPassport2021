@@ -13,15 +13,12 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new OpenAP(this), this);
         Bukkit.getPluginManager().registerEvents(new APMove(this), this);
 
-
-
-
     }
 
 
 
     @Override
     public void onDisable() {
-        System.out.println("A.P. 2021 has Shutdown!");
+        System.out.println("A.P. 2021 has Shutdown!"); System.out.println("A.P.: Did you remember to save the config.yml file?");
     }
 }

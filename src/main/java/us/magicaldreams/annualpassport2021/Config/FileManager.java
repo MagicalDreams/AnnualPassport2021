@@ -26,7 +26,7 @@ public class FileManager {
 
 		if(!(cfile.exists())){
 			config.set("message", "&4&lA Cool Message");
-			config.options().header("Author: developer_nono\nAll configuration data will be stored here!");
+			config.options().header("Author: creeperkila21\nAll configuration data will be stored here!");
 			try{
 				config.save(cfile);
 			} catch(IOException e){

@@ -8,4 +8,4 @@ website: https://magicaldreams.us
 commands:
   backpack:
     description: Open Your Backpack!
-    aliases: [bp, back]
+    aliases: [bp]

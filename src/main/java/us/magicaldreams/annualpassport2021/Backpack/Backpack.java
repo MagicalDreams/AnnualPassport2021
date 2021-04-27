@@ -14,6 +14,7 @@ public class Backpack implements CommandExecutor {
 
     FileManager fm = FileManager.getInstance();
 
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
@@ -28,18 +29,6 @@ public class Backpack implements CommandExecutor {
                 return true;
             }
 
-            Player player = (Player) sender;
-
-            Inventory bpInv = Bukkit.createInventory(null, 36, ChatColor.BLACK + "Backpack");
-
-
-            if(fm.getConfig().contains(player.getUniqueId().toString())){
-                for(String i : fm.getConfig().getConfigurationSection(player.getUniqueId().toString()).getKeys(false)){
-                    ItemStack bpitem = fm.getConfig().getItemStack(player.getUniqueId().toString() + "." + i);
-                    bpInv.addItem(bpitem);
-                }
-            }
-            player.openInventory(bpInv);
             return true;
         }
 

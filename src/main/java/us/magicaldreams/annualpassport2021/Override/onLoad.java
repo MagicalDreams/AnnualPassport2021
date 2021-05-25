@@ -1,21 +1,16 @@
 package us.magicaldreams.annualpassport2021.Override;
 
-import com.google.common.cache.AbstractCache;
 import org.bukkit.*;
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
-import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import us.magicaldreams.annualpassport2021.Backpack.BPInv;
-import us.magicaldreams.annualpassport2021.Backpack.Backpack;
 import us.magicaldreams.annualpassport2021.GUI.AnnualPassportUI;
 
 import java.util.ArrayList;

@@ -29,9 +29,9 @@ public class OpenAP implements Listener {
         Player player = (Player) e.getWhoClicked();
 
 
-        if( e.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "Player Settings")) {
+        if (e.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "Player Settings")) {
 
-            if(e.getCurrentItem() != null) {
+            if (e.getCurrentItem() != null) {
                 e.setCancelled(true);
                 switch (e.getCurrentItem().getType()) {
 
@@ -73,6 +73,40 @@ public class OpenAP implements Listener {
             }
         }
     }
+
+
+
+    @EventHandler
+    public void AttractionClick(InventoryClickEvent e) throws IOException, URISyntaxException {
+
+        Player player = (Player) e.getWhoClicked();
+
+
+        if( e.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "Attractions: Page 1")) {
+
+            if(e.getCurrentItem() != null) {
+                e.setCancelled(true);
+                switch (e.getCurrentItem().getType()) {
+
+                    case BLAZE_SPAWN_EGG:
+                        player.sendMessage(ChatColor.RED + "This Warp is Currently Not Available");
+                     
+                        break;
+                    case CAVE_SPIDER_SPAWN_EGG:
+                        player.sendMessage(ChatColor.RED + "This Warp is Currently Not Available");
+
+                        break;
+                    case CREEPER_SPAWN_EGG:
+                        player.sendMessage(ChatColor.RED + "This Warp is Currently Not Available");
+                        break;
+                    default:
+                        return;
+                }
+            }
+        }
+    }
+
+
 
     @SuppressWarnings("deprecation")
     @EventHandler
